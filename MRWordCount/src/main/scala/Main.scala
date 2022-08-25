@@ -7,10 +7,7 @@ import org.apache.hadoop.mapred.*
 import java.io.IOException
 import java.util
 import scala.jdk.CollectionConverters.*
-/*
-* https://towardsdatascience.com/installing-hadoop-on-a-mac-ec01c67b003c
-* https://medium.com/analytics-vidhya/testing-your-hadoop-program-with-maven-on-intellij-42d534db7974
-* */
+
 
 object Main:
   class Map extends MapReduceBase with Mapper[LongWritable, Text, Text, IntWritable]:
