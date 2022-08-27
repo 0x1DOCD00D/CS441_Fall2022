@@ -9,7 +9,7 @@ import java.util
 import scala.jdk.CollectionConverters.*
 
 
-object Main:
+object MapReduceProgram:
   class Map extends MapReduceBase with Mapper[LongWritable, Text, Text, IntWritable]:
     private final val one = new IntWritable(1)
     private val word = new Text()
@@ -27,11 +27,14 @@ object Main:
       val sum = values.asScala.reduce((valueOne, valueTwo) => new IntWritable(valueOne.get() + valueTwo.get()))
       output.collect(key,  new IntWritable(sum.get()))
 
-  @main def runit(inputPath: String, outputPath: String) =
+  @main def runMapReduce(inputPath: String, outputPath: String) =
     require(!inputPath.isBlank && !outputPath.isBlank)
     println(inputPath)
     val conf: JobConf = new JobConf(this.getClass)
     conf.setJobName("WordCount")
+    conf.set("fs.defaultFS", "local")
+    conf.set("mapreduce.job.maps", "1")
+    conf.set("mapreduce.job.reduces", "1")
     conf.setOutputKeyClass(classOf[Text])
     conf.setOutputValueClass(classOf[IntWritable])
     conf.setMapperClass(classOf[Map])
