@@ -28,8 +28,6 @@ object MapReduceProgram:
       output.collect(key,  new IntWritable(sum.get()))
 
   @main def runMapReduce(inputPath: String, outputPath: String) =
-    require(!inputPath.isBlank && !outputPath.isBlank)
-    println(inputPath)
     val conf: JobConf = new JobConf(this.getClass)
     conf.setJobName("WordCount")
     conf.set("fs.defaultFS", "local")

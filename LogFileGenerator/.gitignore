@@ -1,0 +1,57 @@
+
+# sbt
+bin/
+project/
+target/
+build/
+out/
+
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+modules.xml
+.idea/misc.xml
+
+.DS_Store
+*.class
+*~
+
+# sbt specific
+dist/*
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/local-plugins.sbt
+.history
+.bsp
+
+# Scala-IDE specific
+.scala_dependencies
+.cache
+.classpath
+.project
+.settings
+classes/
+
+# idea
+.idea_modules
+/.worksheet/
+
+# Dotty-IDE
+.dotty-ide-artifact
+.dotty-ide.json
+
+
+.cache-main
+
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# CMake
+cmake-build-*/
