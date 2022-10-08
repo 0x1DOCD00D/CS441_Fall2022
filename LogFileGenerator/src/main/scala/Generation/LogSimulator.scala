@@ -30,6 +30,7 @@ class LogMsgSimulator(val initstate:Tuple2[RandomStringGenerator,String]):
 
   val randVals = scala.util.Random(Parameters.randomSeed)
 
+// counter is how many longs
   import scala.annotation.tailrec
   @tailrec private def ProduceLogMessage(inputState: Tuple2[RandomStringGenerator,String], counter: Long, useCounter:Boolean = true): Tuple2[RandomStringGenerator,String] =
     if Parameters.maxCount > 0 && counter <= 0 then inputState

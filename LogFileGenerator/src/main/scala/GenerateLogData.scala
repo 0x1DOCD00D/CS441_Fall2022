@@ -26,6 +26,8 @@ object GenerateLogData:
   import HelperUtils.Parameters.*
   import GenerateLogData.*
 
+
+
   logger.info("Log data generator started...")
   val INITSTRING = "Starting the string generation"
   val init = unit(INITSTRING)
