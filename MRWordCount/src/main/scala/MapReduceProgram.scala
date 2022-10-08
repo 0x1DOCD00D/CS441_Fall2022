@@ -15,7 +15,7 @@ object MapReduceProgram:
     private val word = new Text()
 
     @throws[IOException]
-    def map(key: LongWritable, value: Text, output: OutputCollector[Text, IntWritable], reporter: Reporter): Unit =
+    override def map(key: LongWritable, value: Text, output: OutputCollector[Text, IntWritable], reporter: Reporter): Unit =
       val line: String = value.toString
       line.split(" ").foreach { token =>
         word.set(token)
