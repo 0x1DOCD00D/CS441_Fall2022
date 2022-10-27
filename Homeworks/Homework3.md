@@ -1,6 +1,6 @@
 # Homework 3
 ### Description: create cloud simulators for evaluating executions of applications in cloud datacenters with different characteristics and deployment models.
-### Grade: 15%
+### Grade: 20%
 
 ## Preliminaries
 As part of the previous homework assignment you learned to create and manage your Git repository, create your application in Scala, create tests using widely popular Scalatest framework, and expand on the provided SBT build and run script for your application. Your job is to create a large-scale simulation of a cloud organization with multiple datacenters that use sophisticated load balancers, autoscalers, sophisticated schedulers and many other important elements of computing clouds that we learned in this course.
@@ -90,7 +90,7 @@ As it is mentioned above, you can post questions and replies, statements, commen
 Sunday, November 20, 2022 at 10PM CST by submitting the link to your homework repo in the Teams Assignments channel. Your submission repo will include the code for the program, your documentation with instructions and detailed explanations on how to assemble and deploy your program along with the results of your program execution, the link to the video and a document that explains these results based on the characteristics and the configuration parameters of your log generator, and what the limitations of your implementation are. Again, do not forget, please make sure that you will give both your TAs and your instructor the read access to your private repository. Your code should compile and run from the command line using the commands **sbt clean compile test** and **sbt clean compile run**. Also, you project should be IntelliJ friendly, i.e., your graders should be able to import your code into IntelliJ and run from there. Use .gitignore to exlude files that should not be pushed into the repo.
 
 ## Evaluation criteria
-- the maximum grade for this homework is 15%. Points are subtracted from this maximum grade: for example, saying that 2% is lost if some requirement is not completed means that the resulting grade will be 15%-2% => 13%; if the core homework functionality does not work or it is not implemented as specified in your documentation, your grade will be zero;
+- the maximum grade for this homework is 20%. Points are subtracted from this maximum grade: for example, saying that 2% is lost if some requirement is not completed means that the resulting grade will be 20%-2% => 18%; if the core homework functionality does not work or it is not implemented as specified in your documentation, your grade will be zero;
 - only some basic simulations examples from some repos are given and nothing else is done: zero grade;
 - having less than five unit and/or integration scalatests: up to 10% lost;
 - missing comments and explanations from your simulation program: up to 10% lost;
